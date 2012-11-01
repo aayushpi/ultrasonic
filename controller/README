@@ -1,0 +1,65 @@
+mpd remote
+version 1.2 - 2006jan07
+copyright 2004-2006 thomas e. morgan (tm@iprog.com)
+http://iprog.com/mpdremote
+
+
+intro
+  mpd remote is a short little php app i wrote to be able to control my mpd-based jukebox from my
+  mobile phone.  as a result, it is intentionally simple.  if you want more power, use another client. 
+  basic playlist support is included (for predefined playlists only).
+
+
+usage
+  all hyperlinks on the main mpd remote page have shortcut access keys which are displayed on screen.  
+  for space reasons they are not displayed exactly as they appear on the phone numberpad.  however, 
+  here they are as such:
+
+    playlist| pause  |  (3)
+    --------+--------+--------
+    << prev | > play | next >>
+    --------+--------+--------
+     vol -  |  stop  |  vol +
+    --------+--------+--------
+    refresh | seek 0 |  (#)
+
+  functionality on older phones that only support hdml or wml i believe is non-existant.  this was
+  written to sprintpcs' current technical recommendations, which are xhtml-mp.  xhtml-mp is a version
+  of xhtml-basic slightly modified for mobile phones.
+
+
+thanks
+  thanks to the mpd (music player daemon) folk.  also thanks to the author of mpd-class (included) which
+  made this little app insanely easy to write.
+
+  thanks to laurent sibilla (lsibilla@skynet.be) who was responsible for the playlist code.  i only
+  polished it up and fixed a couple of things.
+
+
+design notes
+  this was tested in my environment and found to be functional.  for reference, that environment is:
+    apache 1.3.x
+    php 5.0.x
+    mpd 0.12.0 (almost - actually 0.11.x+svn)
+    mpd-class 1.2
+    sprintpcs with pcs vision
+    sanyo scp-5400 phone with the netfront v3.0 browser
+    palm t|x with blazer v4.3 browser
+
+  access control is handled in apache, not the app.
+  mpd daemon host, port, and password can be configured from mpd remote's index.php and playlist.php 
+    files.
+  the pages do not autorefresh because that sucks up needless bandwidth on a mobile connection.
+
+
+history
+  v1.0 - 2004nov24 - initial release
+  v1.2 - 2006jan07 - addition of basic playlist support
+
+
+feedback / contacting me
+  if you find this app useful and/or you can confirm that it works on other phones or with other
+  service providers, i'd love to hear about it.  you can email me at: tm@iprog.com.  suggestions are also
+  welcome, although code patches are better.
+
+thanks for taking the time to try this thing out!
