@@ -20,6 +20,7 @@ if (isset($_GET['song'])) {
 	//play if paused or stopped
 	if ($stat == 2 || $stat == 3){
 		//Add some logic to play and skip to if it's not 0 in que
+			$mpd->PLAdd($song_file);
 			$mpd->SkipTo($song_file);
 			$mpd->Play();
 	}else{
